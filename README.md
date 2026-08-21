@@ -363,12 +363,9 @@ After an election ends, the application can display:
 
 ## 🎯 Future Improvements
 
-- Voter identity verification
-- Improved privacy mechanisms
 - Election scheduling
 - Real-time event notifications
 - Detailed blockchain transaction history
-- Multi-network deployment
 - Enhanced admin dashboard
 - Improved accessibility and mobile experience
 
