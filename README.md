@@ -1,57 +1,389 @@
-# Sample Hardhat 3 Project (`mocha` and `ethers`)
+# 🗳️ Blockchain-Based Voting System
 
-This project showcases a Hardhat 3 project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+A decentralized voting application built using **Solidity, Hardhat, React, TypeScript, and Ethers.js**.
 
-To learn more about Hardhat 3, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3](https://hardhat.org/hardhat3-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+The system uses smart contracts to manage elections, candidates, voters, and votes on the blockchain, providing a transparent and tamper-resistant voting process.
 
-## Project Overview
+---
 
-This example project includes:
+## 🚀 Features
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+### 👤 Voter Features
 
-## Usage
+- Connect wallet using MetaMask
+- Register as a voter
+- View available elections
+- View election status
+- Cast a vote securely through the blockchain
+- Prevent multiple voting in the same election
+- View voting results
+- View election winner
 
-### Running Tests
+### 👨‍💼 Admin Features
 
-To run all the tests in the project, execute the following command:
+- Admin-controlled election management
+- Start an election
+- End an election
+- Add candidates
+- Register voters
+- Manage election-related actions
+- View election information and results
 
-```shell
-npx hardhat test
+### 🗳️ Election Features
+
+- Support for multiple elections
+- Election-specific candidates
+- Election status tracking
+- Blockchain-based vote counting
+- Winner detection
+- Tie detection
+- Early voting support
+- Blockchain transaction records
+
+### 🔐 Blockchain Features
+
+- Smart-contract-based vote recording
+- Transparent vote counting
+- Tamper-resistant data
+- Wallet-based authentication
+- Decentralized transaction processing
+
+---
+
+## 📸 Screenshots
+
+### 1. Initial Dashboard
+<img width="1600" height="797" alt="image" src="https://github.com/user-attachments/assets/7956235f-b492-447e-89cb-99f7b9da4278" />
+
+### 2. Creating an Election
+<img width="1600" height="794" alt="image" src="https://github.com/user-attachments/assets/43875359-5b2d-40a0-ae82-6fa258587d76" />
+
+### 3. Voter Registration
+<img width="1413" height="906" alt="image" src="https://github.com/user-attachments/assets/432136f7-1d33-481f-b468-c0aebbf13bd1" />
+
+### 4. Selecting a Voter Account
+<img width="1600" height="761" alt="image" src="https://github.com/user-attachments/assets/5f3ffb4f-a672-4caf-9f29-0dbd3845d510" />
+
+### 5. Adding a Candidate
+<img width="1600" height="807" alt="image" src="https://github.com/user-attachments/assets/8283a483-64ea-4a9a-8849-10ca4eba85a0" />
+
+### 6. Candidate Registration Transaction
+<img width="1600" height="800" alt="image" src="https://github.com/user-attachments/assets/49770694-e644-4ec9-9c78-387035e812ea" />
+
+### 7. Election with Candidates
+<img width="1423" height="918" alt="image" src="https://github.com/user-attachments/assets/e61fb9f7-1dbb-4f72-8b57-d8e20dd2fd83" />
+
+### 8. Election Started
+<img width="1600" height="763" alt="image" src="https://github.com/user-attachments/assets/6aa2bc34-6ee6-4c43-aee4-4c7ab41776d9" />
+
+### 9. Vote Successfully Recorded
+<img width="1600" height="759" alt="image" src="https://github.com/user-attachments/assets/585fd5e9-9c91-48f8-8adf-4db03527acf9" />
+
+### 10. Ending the Election
+<img width="1600" height="797" alt="image" src="https://github.com/user-attachments/assets/f4e28761-a5ab-4c7a-be52-610e3123b692" />
+
+### 11. Final Election Results & Winner
+<img width="1600" height="766" alt="image" src="https://github.com/user-attachments/assets/3206236d-ca32-497e-bdd3-235b3ca163fb" />
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- CSS
+
+### Blockchain
+
+- Solidity
+- Hardhat 3
+- Ethers.js
+- Ethereum-compatible network
+- MetaMask
+
+### Development
+
+- Node.js
+- TypeScript
+- Mocha
+- Hardhat testing tools
+
+---
+
+## 📁 Project Structure
+
+```text
+Blockchain-Based-Voting-System/
+│
+├── contracts/
+│   └── VotingSystem.sol
+│
+├── frontend/
+│   ├── public/
+│   └── src/
+│       ├── assets/
+│       ├── App.tsx
+│       ├── App.css
+│       ├── contract.ts
+│       ├── index.css
+│       └── main.tsx
+│
+├── ignition/
+│   └── modules/
+│       └── Counter.ts
+│
+├── scripts/
+│   ├── addCandidates.ts
+│   ├── adminActions.ts
+│   ├── castVotes.ts
+│   ├── deploy.ts
+│   ├── earlyVoteTest.ts
+│   ├── endElection.ts
+│   ├── getResults.ts
+│   └── startElection.ts
+│
+├── types/
+│   └── ethers-contracts/
+│
+├── hardhat.config.ts
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+└── README.md
 ```
 
-You can also selectively run the Solidity or `mocha` tests:
+---
 
-```shell
-npx hardhat test solidity
-npx hardhat test mocha
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/shubha229/Blockchain-Based-Voting-System.git
 ```
 
-### Make a deployment to Sepolia
+Navigate into the project:
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
-
-To run the deployment to a local chain:
-
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
+```bash
+cd Blockchain-Based-Voting-System
 ```
 
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
+Install blockchain dependencies:
 
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
-
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
-
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
+```bash
+npm install
 ```
 
-After setting the variable, you can run the deployment with the Sepolia network:
+Install frontend dependencies:
 
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
+```bash
+cd frontend
+npm install
 ```
+
+---
+
+## 🔨 Compile the Smart Contract
+
+From the project root:
+
+```bash
+npx hardhat compile
+```
+
+This compiles `VotingSystem.sol` and generates the required contract artifacts and TypeScript typings.
+
+---
+
+## 🚀 Deploy the Smart Contract
+
+Run the deployment script:
+
+```bash
+npx hardhat run scripts/deploy.ts
+```
+
+After deployment, copy the deployed contract address into:
+
+```text
+frontend/src/contract.ts
+```
+
+Update:
+
+```typescript
+export const CONTRACT_ADDRESS = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
+```
+
+---
+
+## 💻 Run the Frontend
+
+Navigate to the frontend:
+
+```bash
+cd frontend
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the URL displayed by Vite in your browser.
+
+---
+
+## 🦊 MetaMask
+
+The application requires a Web3 wallet such as **MetaMask**.
+
+Before interacting with the application:
+
+1. Install MetaMask.
+2. Connect your wallet.
+3. Select the same blockchain network where the contract was deployed.
+4. Make sure the wallet has sufficient funds for transaction gas fees.
+5. Connect the wallet from the application.
+
+---
+
+## 🔄 Application Flow
+
+```text
+Admin
+  │
+  ├── Start Election
+  │
+  ├── Add Candidates
+  │
+  ├── Register Voters
+  │
+  ▼
+Election Active
+  │
+  ├── Voter connects wallet
+  │
+  ├── Voter selects candidate
+  │
+  ├── Vote transaction
+  │
+  ▼
+Blockchain
+  │
+  ├── Vote recorded
+  ├── Vote count updated
+  └── Duplicate voting prevented
+  │
+  ▼
+Election Ends
+  │
+  ├── Results calculated
+  ├── Winner determined
+  
+```
+
+---
+
+## 🏗️ Smart Contract
+
+The main smart contract is:
+
+```text
+contracts/VotingSystem.sol
+```
+
+The smart contract handles the core voting logic, including:
+
+- Election management
+- Candidate management
+- Voter management
+- Vote recording
+- Vote counting
+- Election results
+- Winner and tie detection
+
+---
+
+## 📜 Available Scripts
+
+| Script | Purpose |
+|---|---|
+| `deploy.ts` | Deploy the voting smart contract |
+| `addCandidates.ts` | Add candidates |
+| `adminActions.ts` | Perform administrative actions |
+| `castVotes.ts` | Cast votes |
+| `earlyVoteTest.ts` | Test early voting functionality |
+| `startElection.ts` | Start an election |
+| `endElection.ts` | End an election |
+| `getResults.ts` | Retrieve election results |
+
+Run a script using:
+
+```bash
+npx hardhat run scripts/<script-name>.ts
+```
+
+Example:
+
+```bash
+npx hardhat run scripts/getResults.ts
+```
+
+---
+
+## 🔒 Security & Integrity
+
+The system is designed around blockchain-based verification:
+
+- Votes are recorded through smart-contract transactions.
+- Wallet addresses are used to identify voters.
+- Voting restrictions are enforced by the smart contract.
+- Vote counts are maintained on-chain.
+- Election results are calculated from blockchain data.
+- Administrative operations are restricted to the designated administrator.
+
+---
+
+## 📊 Results
+
+After an election ends, the application can display:
+
+- Candidate names
+- Vote counts
+- Election results
+- Winner
+- Tie information when applicable
+
+---
+
+## 🎯 Future Improvements
+
+- Voter identity verification
+- Improved privacy mechanisms
+- Election scheduling
+- Real-time event notifications
+- Detailed blockchain transaction history
+- Multi-network deployment
+- Enhanced admin dashboard
+- Improved accessibility and mobile experience
+
+---
+
+## 👩‍💻 Author
+
+**Shubhashree Baburaya Nayak**
+
+GitHub:
+
+https://github.com/shubha229
+
+---
+
+## 📄 License
+
+This project is developed for educational and demonstration purposes.
