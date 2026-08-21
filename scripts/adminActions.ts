@@ -4,7 +4,7 @@ async function main() {
   const { ethers } = await network.connect();
 
   // Use the SAME contract address from your latest deployment
-  const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  const contractAddress = "NEW_CONTRACT_ADDRESS";
 
   const [admin, voterA, voterB, voterC] = await ethers.getSigners();
 
